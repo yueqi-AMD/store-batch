@@ -1,0 +1,14 @@
+# 本地配置（含真实表格 ID，切勿提交）
+config.json
+.env
+
+# 运行状态与产物
+state.json
+logs/
+shots/
+cache/
+__pycache__/
+*.pyc
+
+# 演示渲染中间目录
+demo/preview/

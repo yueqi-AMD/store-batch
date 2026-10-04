@@ -1,0 +1,75 @@
+{
+  "feishu": {
+    "base_url": "https://open.feishu.cn",
+    "app_token": "YOUR_BASE_APP_TOKEN",
+    "table_id": "YOUR_TABLE_ID",
+    "view_id": null,
+    "fields": {
+      "store_name": "oa门店名称",
+      "manager": "店长",
+      "screenshot": "跟进截图",
+      "date_screenshot": "跟进截图{date}",
+      "date_time": "跟进时间{date}"
+    },
+    "card_fields": [
+      "门店ID",
+      "oa门店名称",
+      "点评星级",
+      "美团星级",
+      "门店等级",
+      "经营评分",
+      "推广费用",
+      "意向转化人数",
+      "新增好评目标",
+      "好评达成额",
+      "交易额目标",
+      "交易达成额",
+      "剔除后交易额",
+      "剔除率",
+      "好评达成进度",
+      "交易达成进度",
+      "时间进度",
+      "核销券数",
+      "负责人",
+      "交易达标"
+    ]
+  },
+  "message": "店长你好，这是咱们门店的各项运营数据，请查收并关注达成进度，建议多多引导客户通过线下码核销交易来提升门店的交易额哈，提升交易额和好评可以带动门店的流量权重增加给门店带来更多客户，辛苦店长多多关注线上运营，一起提升门店流量和业绩哈。",
+  "priority": {
+    "enabled": true,
+    "type_field": "联营|直营",
+    "target_field": "交易达标",
+    "batch_size": 30,
+    "clamp_to_tier": true,
+    "tiers": [
+      {"label": "T1 直营店·不达标", "types": ["直营店"], "target": "不达标"},
+      {"label": "T2 联营/协店组·不达标", "types": ["联营店", "专职协店组"], "target": "不达标"},
+      {"label": "T3 直营店·达标", "types": ["直营店"], "target": "达标"},
+      {"label": "T4 联营/协店组·达标", "types": ["联营店", "专职协店组"], "target": "达标"}
+    ]
+  },
+  "pause": {
+    "enabled": true,
+    "hotkey": "ctrl+z"
+  },
+  "skip_stores": {},
+  "security": {
+    "allowed_app_token": "",
+    "allowed_table_id": ""
+  },
+  "wecom": {
+    "window_title_keyword": "企业微信",
+    "action_delay_min": 0.4,
+    "action_delay_max": 1.0,
+    "send_interval_min_sec": 8,
+    "send_interval_max_sec": 15
+  },
+  "output": {
+    "store_shot_dir": "shots/store",
+    "chat_shot_dir": "shots/chat",
+    "search_shot_dir": "shots/search"
+  },
+  "cleanup": {
+    "delete_local_after_upload": true
+  }
+}
